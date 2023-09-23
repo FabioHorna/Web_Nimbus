@@ -1,31 +1,20 @@
 <template>
   <div id="app">
     <Header />
-    <Card />
-    <Proovedor />
-    <Products />
-    <Users />
+    <router-view></router-view> <!-- Aquí se mostrarán las páginas HomePage.vue o ServicePage.vue -->
     <Footer />
   </div>
 </template>
 
 <script>
 import Header from './header/Header.vue';
-import Card from './components/Card.vue';
-import Proovedor from './components/Proovedor.vue';
-import Products from './components/Products.vue';
-import Users from './components/Users.vue';
 import Footer from './footer/Footer.vue';
 
 export default {
   components: {
     Header,
-    Card,
-    Proovedor,
-    Products,
-    Users,
-    Footer
-  }
+    Footer,
+  },
 };
 </script>
 

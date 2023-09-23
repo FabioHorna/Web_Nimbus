@@ -8,7 +8,9 @@
       <p class="sub-text" style="color: #CCB078;">Puedes filtrar los proveedores recientes y más cercanos</p>
       <div class="button-section">
         <div>
-          <button class="rounded-button" @click="showLocation = !showLocation" :style="{ 'background-color': showLocation ? '#7C394A' : '#E61C5D', 'color': 'white' }">Comenzar</button>
+          <router-link to="/service">
+            <button class="rounded-button" :style="{ 'background-color': showLocation ? '#7C394A' : '#E61C5D', 'color': 'white' }">Comenzar</button>
+          </router-link>
         </div>
       </div>
     </div>

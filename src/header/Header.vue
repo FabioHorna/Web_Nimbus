@@ -6,9 +6,10 @@
     </div>
     <nav class="nav-links">
       <ul>
-        <li><a href="#" class="nav-link" @mouseenter="hoverLink('inicio')" @mouseleave="leaveLink('inicio')" :style="{ color: linkColor === 'inicio' ? '#000000' : '#E61C5D' }">Inicio</a></li>
-        <li><a href="#" class="nav-link" @mouseenter="hoverLink('conocenos')" @mouseleave="leaveLink('conocenos')" :style="{ color: linkColor === 'conocenos' ? '#000000' : '#E61C5D' }">Conócenos</a></li>
-        <li><a href="#" class="nav-link" @mouseenter="hoverLink('servicios')" @mouseleave="leaveLink('servicios')" :style="{ color: linkColor === 'servicios' ? '#000000' : '#E61C5D' }">Servicios</a></li>
+        <li><router-link to="/" class="nav-link">Inicio</router-link></li>
+        <!-- Agregamos un enlace a InfoPages con el uso de router-link -->
+        <li><router-link to="/infopages" class="nav-link">Conócenos</router-link></li>
+        <li><router-link to="/service" class="nav-link">Servicios</router-link></li>
       </ul>
     </nav>
     <div class="actions">
@@ -22,7 +23,7 @@
         <h2>Login</h2>
         <input type="text" placeholder="Correo" class="login-input">
         <input type="password" placeholder="Contraseña" class="login-input">
-        <button class="login-button">Ir</button>
+        <button class="login-button" @click="login">Ir</button> <!-- Botón "Ir" para iniciar sesión -->
       </div>
     </transition>
   </header>
@@ -33,7 +34,7 @@ export default {
   data() {
     return {
       linkColor: null,
-      showLoginBox: false // Variable para controlar la visibilidad del recuadro de login
+      showLoginBox: false, // Variable para controlar la visibilidad del recuadro de login
     };
   },
   methods: {
@@ -48,8 +49,13 @@ export default {
     },
     closeLoginBox() {
       this.showLoginBox = false; // Cierra el recuadro de login al hacer clic en la "X"
-    }
-  }
+    },
+    login() {
+      // Aquí puedes agregar la lógica de inicio de sesión
+      // Por ejemplo, validar el correo y contraseña, y luego redirigir a ServicePage.vue
+      // this.$router.push({ name: 'ServicePage' });
+    },
+  },
 };
 </script>
 
