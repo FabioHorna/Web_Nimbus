@@ -24,11 +24,11 @@ export default {
       providers: [
         { name: 'Microsoft', image: './Proovedor_Microsoft.jpg', zoomed: false },
         { name: 'Azure', image: './Proovedor_Azure.jpg', zoomed: false },
-        { name: 'Google', image: '/Proovedor_Google.jpg', zoomed: false },
-        { name: 'Oracle', image: '/Proovedor_Oracle.jpg', zoomed: false },
-        { name: 'Sage', image: '/Proovedor_Sage.jpg', zoomed: false },
-        { name: 'Quickbooks', image: '/Proovedor_Quickbooks.jpg', zoomed: false },
-        { name: 'Workday', image: '/Proovedor_Workday.jpg', zoomed: false },
+        { name: 'Google', image: './Proovedor_Google.jpg', zoomed: false },
+        { name: 'Oracle', image: './Proovedor_Oracle.jpg', zoomed: false },
+        { name: 'Sage', image: './Proovedor_Sage.jpg', zoomed: false },
+        { name: 'Quickbooks', image: './Proovedor_Quickbooks.jpg', zoomed: false },
+        { name: 'Workday', image: './Proovedor_Workday.jpg', zoomed: false },
       ],
       currentIndex: 0,
       visibleCount: 3, // Cantidad de proveedores visibles a la vez
