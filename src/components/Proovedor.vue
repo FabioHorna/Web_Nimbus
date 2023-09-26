@@ -22,7 +22,7 @@ export default {
   data() {
     return {
       providers: [
-        { name: 'Proveedor 1', image: '/public/proovedor/Proovedor_Microsoft.jpg', zoomed: false },
+        { name: 'Microsoft', image: '/Proovedor_Microsoft.jpg', zoomed: false },
         { name: 'Proveedor 2', image: 'url_a_imagen_2', zoomed: false },
         { name: 'Proveedor 3', image: 'url_a_imagen_3', zoomed: false },
         { name: 'Proveedor 4', image: 'url_a_imagen_4', zoomed: false },

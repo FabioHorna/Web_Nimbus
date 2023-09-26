@@ -25,7 +25,7 @@ export default {
   data() {
     return {
       products: [
-        { image: 'url_a_imagen_1', rating: 4.5, description: 'Descripción del Producto 1', highlighted: false },
+        { image: 'https://drive.google.com/file/d/1lx0bwMBQdAYWQTuGRz_6PeJludUVylH4/view?usp=sharing', rating: 4.5, description: 'Descripción del Producto 1', highlighted: false },
         { image: 'url_a_imagen_2', rating: 3.8, description: 'Descripción del Producto 2', highlighted: false },
         { image: 'url_a_imagen_3', rating: 5.0, description: 'Descripción del Producto 3', highlighted: false },
         { image: 'url_a_imagen_4', rating: 4.2, description: 'Descripción del Producto 4', highlighted: false },
