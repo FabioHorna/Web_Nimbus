@@ -39,7 +39,7 @@ export default {
   padding: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
-  background-color: #ffffff; /* Fondo gris */
+  background-color: #ffffff; 
 }
 
 .text-section {
@@ -50,7 +50,7 @@ export default {
 h1 {
   font-size: 2em;
   color: #E61C5D;
-  transition: color 0.3s ease-in-out; /* Agrega una animación de cambio de color */
+  transition: color 0.3s ease-in-out; 
 }
 
 .sub-text {
@@ -77,11 +77,11 @@ h1 {
   background-color: #E61C5D;
   color: white;
   cursor: pointer;
-  transition: background-color 0.3s ease-in-out; /* Agrega una animación de cambio de color */
+  transition: background-color 0.3s ease-in-out; 
 }
 
 .rounded-button:hover {
-  background-color: #7C394A; /* Cambia el color al pasar el ratón */
+  background-color: #7C394A; 
 }
 
 /* Diseño Responsivo */

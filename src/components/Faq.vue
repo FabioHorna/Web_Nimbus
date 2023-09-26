@@ -14,18 +14,17 @@ export default {
     return {
       faqItems: [
         {
-          question: "¿Pregunta 1?",
-          answer: "Respuesta a la pregunta 1."
+          question: "¿Que Proovedores tienen?",
+          answer: "tenemos una extensa lista de proovedores, puedes elegir el que quieras."
         },
         {
-          question: "¿Pregunta 2?",
-          answer: "Respuesta a la pregunta 2."
+          question: "¿Puedo Cancelar algun proovedor?",
+          answer: "Claro, puedes contactarte con nuestro equipo para mas información."
         },
         {
-          question: "¿Pregunta 3?",
-          answer: "Respuesta a la pregunta 3."
+          question: "¿Como puedo elegir el mejor proovedor?",
+          answer: "En la seccion de servicios puedes filtrar y buscar segun tus necesidades."
         },
-        // Agrega más preguntas y respuestas según sea necesario
       ]
     };
   }

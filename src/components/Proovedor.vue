@@ -4,7 +4,7 @@
     <div class="provider-carousel">
       <div class="provider-card" v-for="(provider, index) in visibleProviders" :key="index">
         <div class="provider-content" @mouseover="zoomIn(provider)" @mouseleave="zoomOut(provider)">
-          <img :src="provider.image" alt="Proveedor Image" class="provider-image" :class="{ 'zoomed': provider.zoomed }" />
+          <img :src="getImageUrl(provider.image)" alt="Proveedor Image" class="provider-image" :class="{ 'zoomed': provider.zoomed }" />
           <p>{{ provider.name }}</p>
         </div>
       </div>
@@ -22,14 +22,13 @@ export default {
   data() {
     return {
       providers: [
-        { name: 'Microsoft', image: '/Proovedor_Sage.jpg', zoomed: false },
-        { name: 'Proveedor 2', image: 'url_a_imagen_2', zoomed: false },
-        { name: 'Proveedor 3', image: 'url_a_imagen_3', zoomed: false },
-        { name: 'Proveedor 4', image: 'url_a_imagen_4', zoomed: false },
-        { name: 'Proveedor 5', image: 'url_a_imagen_5', zoomed: false },
-        { name: 'Proveedor 6', image: 'url_a_imagen_6', zoomed: false },
-        { name: 'Proveedor 7', image: 'url_a_imagen_7', zoomed: false },
-        { name: 'Proveedor 8', image: 'url_a_imagen_8', zoomed: false },
+        { name: 'Microsoft', image: '/Proovedor_Microsoft.jpg', zoomed: false },
+        { name: 'Azure', image: '/Proovedor_Azure.jpg', zoomed: false },
+        { name: 'Google', image: '/Proovedor_Google.jpg', zoomed: false },
+        { name: 'Oracle', image: '/Proovedor_Oracle.jpg', zoomed: false },
+        { name: 'Sage', image: '/Proovedor_Sage.jpg', zoomed: false },
+        { name: 'Quickbooks', image: '/Proovedor_Quickbooks.jpg', zoomed: false },
+        { name: 'Workday', image: '/Proovedor_Workday.jpg', zoomed: false },
       ],
       currentIndex: 0,
       visibleCount: 3, // Cantidad de proveedores visibles a la vez
@@ -57,6 +56,10 @@ export default {
     },
     zoomOut(provider) {
       provider.zoomed = false;
+    },
+    getImageUrl(imagePath) {
+      // Devuelve la URL completa de la imagen utilizando una ruta absoluta
+      return process.env.BASE_URL + imagePath;
     },
   },
 };
