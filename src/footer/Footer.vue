@@ -5,24 +5,53 @@
     </div>
     <div class="menu">
       <ul>
-        <li><a href="#" class="footer-link">About</a></li>
+        <!-- Cambia el enlace a AboutUs.vue -->
+        <li><router-link to="/aboutus" class="footer-link">About</router-link></li>
         <li><a href="#" class="footer-link">Company</a></li>
         <li><a href="#" class="footer-link">Support</a></li>
       </ul>
     </div>
     <div class="subscription">
-      <input type="email" placeholder="Enter your email" class="email-input" />
-      <button class="rounded-button">Subscribe</button>
+      <input
+        type="email"
+        placeholder="Enter your email"
+        class="email-input"
+        v-model="email"
+      />
+      <button class="rounded-button" @click="subscribe">Subscribe</button>
+    </div>
+    <!-- Notificación de éxito -->
+    <div class="success-notification" v-if="showSuccess">
+      Success! You are subscribed.
     </div>
   </footer>
 </template>
 
 <script>
 export default {
-  name: 'Footer'
+  name: 'Footer',
+  data() {
+    return {
+      email: '',
+      showSuccess: false, // Variable para controlar la visibilidad de la notificación
+    };
+  },
+  methods: {
+    subscribe() {
+      // Aquí puedes agregar la lógica para suscribir al usuario
+      // Por ejemplo, validar el correo y realizar la suscripción
+      // Luego, muestra la notificación de éxito
+      this.showSuccess = true;
+      // Limpia el campo de correo después de la suscripción si es necesario
+      this.email = '';
+      // Puedes ajustar la duración de la notificación y ocultarla después de cierto tiempo
+      setTimeout(() => {
+        this.showSuccess = false;
+      }, 3000); // Esta notificación se ocultará después de 3 segundos
+    },
+  },
 };
 </script>
-
 <style scoped>
 .main-footer {
   display: flex;

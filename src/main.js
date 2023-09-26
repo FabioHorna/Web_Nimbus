@@ -2,7 +2,9 @@ import { createApp } from 'vue';
 import App from './App.vue';
 import HomePage from './pages/HomePage.vue';
 import ServicePage from './pages/ServicePage.vue';
-import InfoPage from './pages/InfoPage.vue'; // Importa la página InfoPage
+import InfoPage from './pages/InfoPage.vue'; // Asegúrate de importar InfoPage correctamente
+import AboutUs from './pages/AboutUs.vue'; // Importa la página AboutUs
+import UserPage from './pages/User.vue'; // Importa la página User.vue
 
 import { createRouter, createWebHistory } from 'vue-router';
 
@@ -11,7 +13,9 @@ const router = createRouter({
   routes: [
     { path: '/', component: HomePage },
     { path: '/service', component: ServicePage },
-    { path: '/conocenos', component: InfoPage }, // Agrega la ruta para InfoPage
+    { path: '/infopages', component: InfoPage },
+    { path: '/aboutus', component: AboutUs }, // Añade la ruta a AboutUs
+    { path: '/user', component: UserPage }, // Añade la ruta a UserPage
   ],
 });
 

@@ -54,6 +54,8 @@ export default {
       // Aquí puedes agregar la lógica de inicio de sesión
       // Por ejemplo, validar el correo y contraseña, y luego redirigir a ServicePage.vue
       // this.$router.push({ name: 'ServicePage' });
+      // Redirigir al usuario a User.vue
+      this.$router.push({ path: '/user' });
     },
   },
 };

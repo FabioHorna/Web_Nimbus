@@ -1,9 +1,16 @@
 <template>
   <div class="products-container">
     <h1 style="color: #E61C5D;">Productos</h1>
+    <input
+      type="text"
+      v-model="searchQuery"
+      @input="filterProducts"
+      class="search-bar"
+      placeholder="Buscar productos..."
+    />
     <button @click="filterByRating" :class="{ 'highlighted': filterActive }" class="rounded-button">Filtrar</button>
     <div class="product-cards">
-      <div v-for="(product, index) in products" :key="index" class="product-card" :class="{ 'highlighted': product.highlighted }">
+      <div v-for="(product, index) in filteredProducts" :key="index" class="product-card" :class="{ 'highlighted': product.highlighted }">
         <img :src="product.image" alt="Producto Imagen" />
         <p style="color: #000;">Calificación: {{ product.rating }}/5</p>
         <p class="description">{{ product.description }}</p>
@@ -11,8 +18,6 @@
     </div>
   </div>
 </template>
-
-<!-- Resto del código sin cambios -->
 
 <script>
 export default {
@@ -23,10 +28,25 @@ export default {
         { image: 'url_a_imagen_1', rating: 4.5, description: 'Descripción del Producto 1', highlighted: false },
         { image: 'url_a_imagen_2', rating: 3.8, description: 'Descripción del Producto 2', highlighted: false },
         { image: 'url_a_imagen_3', rating: 5.0, description: 'Descripción del Producto 3', highlighted: false },
-        { image: 'url_a_imagen_4', rating: 4.2, description: 'Descripción del Producto 4', highlighted: false }
+        { image: 'url_a_imagen_4', rating: 4.2, description: 'Descripción del Producto 4', highlighted: false },
+        { image: 'url_a_imagen_5', rating: 3.2, description: 'que tal', highlighted: false },
+        { image: 'url_a_imagen_6', rating: 2.2, description: 'hola', highlighted: false },
       ],
-      filterActive: false
+      filterActive: false,
+      searchQuery: '',
     };
+  },
+  computed: {
+    filteredProducts() {
+      if (this.searchQuery === '') {
+        return this.products;
+      } else {
+        const query = this.searchQuery.toLowerCase();
+        return this.products.filter(product =>
+          product.description.toLowerCase().includes(query)
+        );
+      }
+    },
   },
   methods: {
     filterByRating() {
@@ -35,8 +55,11 @@ export default {
         product.highlighted = product.rating === maxRating;
       });
       this.filterActive = true;
-    }
-  }
+    },
+    filterProducts() {
+      this.filterActive = false;
+    },
+  },
 };
 </script>
 
@@ -99,6 +122,15 @@ export default {
   margin-top: 8px;
   font-size: 0.9em;
   color: #666;
+}
+
+.search-bar {
+  width: 100%;
+  padding: 8px;
+  margin: 16px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
 }
 
 /* Diseño Responsivo */
