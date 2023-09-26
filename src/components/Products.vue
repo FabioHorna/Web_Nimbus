@@ -25,12 +25,12 @@ export default {
   data() {
     return {
       products: [
-        { image: '/Products_1.jpg', rating: 4.5, description: 'Descripción del Producto 1', highlighted: false },
-        { image: '/Products_2.jpg', rating: 3.8, description: 'Descripción del Producto 2', highlighted: false },
-        { image: '/Products_3.jpg', rating: 5.0, description: 'Descripción del Producto 3', highlighted: false },
-        { image: '/Products_4.jpg', rating: 4.2, description: 'Descripción del Producto 4', highlighted: false },
-        { image: '/Products_5.jpg', rating: 3.2, description: 'que tal', highlighted: false },
-        { image: '/Products_6.jpg', rating: 2.2, description: 'hola', highlighted: false },
+        { image: '/Products_1.jpg', rating: 4.5, description: 'Software para oficinas', highlighted: false },
+        { image: '/Products_2.jpg', rating: 3.8, description: 'Software para emrpesas contadoras', highlighted: false },
+        { image: '/Products_3.jpg', rating: 3.0, description: 'Hosting apra web-pages', highlighted: false },
+        { image: '/Products_4.jpg', rating: 4.2, description: 'Servicios en la nube', highlighted: false },
+        { image: '/Products_5.jpg', rating: 3.2, description: 'Software para integracion de equipos', highlighted: false },
+        { image: '/Products_6.jpg', rating: 2.2, description: 'Sistema de compras', highlighted: false },
       ],
       filterActive: false,
       searchQuery: '',

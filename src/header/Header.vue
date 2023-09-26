@@ -72,7 +72,12 @@ export default {
   font-size: 1.5em;
   cursor: pointer;
   color: #E61C5D;
+  transition: transform 0.3s ease; /* Agregar animación de transformación */
 }
+.close-button:hover {
+  transform: scale(1.2); /* Aumenta ligeramente el tamaño al pasar el mouse por encima */
+}
+
 /* Estilos básicos del encabezado */
 .main-header {
   display: flex;
@@ -80,6 +85,7 @@ export default {
   align-items: center;
   padding: 10px;
   background-color: grey;
+  flex-wrap: wrap; /* Para manejar la envoltura de elementos en pantallas pequeñas */
 }
 
 .logo {
@@ -104,6 +110,7 @@ export default {
   color: black;
   text-decoration: none;
   padding: 0 15px;
+  transition: color 0.3s ease; /* Agregar animación de cambio de color */
 }
 
 .nav-link:hover {
@@ -115,6 +122,13 @@ export default {
   border-radius: 12px;
   background-color: blue;
   color: white;
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Agregar animaciones */
+  cursor: pointer;
+}
+
+.rounded-button:hover {
+  background-color: #0056b3; /* Cambia el color al pasar el ratón */
+  transform: scale(1.05); /* Aumenta ligeramente el tamaño al pasar el mouse por encima */
 }
 
 /* Estilo para el recuadro de login con animación de desvanecimiento */
@@ -135,6 +149,11 @@ export default {
   width: 200px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   z-index: 100; /* Para que aparezca por encima del contenido */
+  transition: transform 0.3s ease, opacity 0.3s ease; /* Agregar animaciones */
+}
+.login-box:hover {
+  transform: scale(1.05); /* Aumenta ligeramente el tamaño al pasar el mouse por encima */
+  opacity: 0.9; /* Reduce la opacidad al pasar el mouse por encima */
 }
 .login-input {
   width: 100%;
@@ -151,5 +170,10 @@ export default {
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Agregar animaciones */
+}
+.login-button:hover {
+  background-color: #9a1234; /* Cambia el color al pasar el ratón */
+  transform: scale(1.05); /* Aumenta ligeramente el tamaño al pasar el mouse por encima */
 }
 </style>
